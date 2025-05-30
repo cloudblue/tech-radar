@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="description" content="CloudBlue Connect Tech Radar">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Connect Tech Radar</title>
+<link rel="shortcut icon" href="https://connect.cloudblue.com/wp-content/uploads/2020/05/Symbol-CB-Connect-Black.png">
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="radar.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+fetch('./config.json').then(function(response) {
+  return response.json();
+}).then(function(data) {
+  radar_visualization({
+    repo_url: "https://github.com/cloudblue/tech-radar",
+    title: "Connect Tech Radar",
+    date: data.date,
+    quadrants: [
+      { name: "Processes & Techniques" },
+      { name: "Architecture & Platforms" },
+      { name: "Tools & Databases" },
+      { name: "Languages & Frameworks" },
+    ],
+    rings: [
+      { name: "ADOPT", color: "#5ba300" },
+      { name: "TRIAL", color: "#009eb0" },
+      { name: "ASSESS", color: "#c7ba00" },
+      { name: "HOLD", color: "#e09b96" }
+    ],
+    entries: data.entries
+  });
+}).catch(function(err) {
+  console.log('Error loading config.json', err);
+});
+</script>
+
+</body>
+</html>
