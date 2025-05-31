@@ -542,8 +542,8 @@
     },
     {
       "quadrant": 2,
-      "ring": 1,
-      "label": "Timescale (PG ext)",
+      "ring": 0,
+      "label": "TimescaleDB",
       "active": true,
       "moved": 1
     },
