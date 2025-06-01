@@ -213,7 +213,7 @@
     },
     {
       "quadrant": 0,
-      "ring": 1,
+      "ring": 0,
       "label": "1-1s",
       "active": true,
       "moved": 0
@@ -262,10 +262,10 @@
     },
     {
       "quadrant": 0,
-      "ring": 2,
+      "ring": 1,
       "label": "FullStack Dev",
       "active": true,
-      "moved": 2
+      "moved": 1
     },
     {
       "quadrant": 0,
@@ -1097,6 +1097,20 @@
       "quadrant": 3,
       "ring": 1,
       "label": "Django Channels",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "Azure ACI",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "AWS ECS",
       "active": true,
       "moved": 0
     }
